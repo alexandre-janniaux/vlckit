@@ -397,8 +397,8 @@ buildLibVLC() {
     else
         EXTRA_CFLAGS="-arch ${ARCH}"
         EXTRA_CFLAGS+=" -${OSVERSIONMINCFLAG}-version-min=${SDK_MIN}"
-        EXTRA_LDFLAGS=" -Wl,-${OSVERSIONMINLDFLAG}_version_min,${SDK_MIN}"
-        export LDFLAGS="${LDFLAGS} -v -Wl,-${OSVERSIONMINLDFLAG}_version_min,${SDK_MIN}"
+        EXTRA_LDFLAGS=" -Wl,-${OSVERSIONMINLDFLAG}_simulator_version_min,${SDK_MIN}"
+        export LDFLAGS="${LDFLAGS} -v -Wl,-${OSVERSIONMINLDFLAG}_simulator_version_min,${SDK_MIN}"
     fi
 
     spushd ${VLCROOT}/contrib
